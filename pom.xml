@@ -44,7 +44,13 @@
 						<descriptor>src/main/assembly/assembly.xml</descriptor>
 					</descriptors>
 					<appendAssemblyId>false</appendAssemblyId>
+					<archive>
+						<manifest>
+							<mainClass>com.goeuro.com.goeuro.Main</mainClass>
+						</manifest>
+					</archive>
 				</configuration>
+
 				<executions>
 					<execution>
 						<id>make-assembly</id>
@@ -54,18 +60,6 @@
 						</goals>
 					</execution>
 				</executions>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-jar-plugin</artifactId>
-				<configuration>
-					<archive>
-						<manifest>
-							<addClasspath>true</addClasspath>
-							<mainClass>com.goeuro.com.goeuro.Main</mainClass>
-						</manifest>
-					</archive>
-				</configuration>
 			</plugin>
 
 
