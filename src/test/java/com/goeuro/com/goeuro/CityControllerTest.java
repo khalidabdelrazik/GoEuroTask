@@ -1,7 +1,6 @@
 package com.goeuro.com.goeuro;
 
 import org.junit.Assert;
-import org.junit.Before;
 import org.junit.Test;
 
 import com.goeuro.com.goeuro.controller.CityService;

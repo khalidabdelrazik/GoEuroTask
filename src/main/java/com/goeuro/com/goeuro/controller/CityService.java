@@ -43,8 +43,7 @@ public class CityService {
 			
 		} 
 		Country[] countries = gson.fromJson(cityData, Country[].class);
-		CsvFileWriter csvFileWriter = new CsvFileWriter();
-		csvFileWriter.writeCsvFile(outputFileName, countries);
+		CsvFileWriter.writeCsvFile(outputFileName, countries);
 		return true;
 	}
 }
