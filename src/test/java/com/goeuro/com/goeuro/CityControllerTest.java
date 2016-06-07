@@ -4,7 +4,7 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.goeuro.com.goeuro.controller.CityController;
+import com.goeuro.com.goeuro.controller.CityService;
 
 // TODO: Auto-generated Javadoc
 /**
@@ -13,7 +13,7 @@ import com.goeuro.com.goeuro.controller.CityController;
 public class CityControllerTest {
 	
 	/** The city controller. */
-	CityController cityController = new CityController();
+	CityService cityController = new CityService();
 
 	/**
 	 * Instantiates a new city controller test.
