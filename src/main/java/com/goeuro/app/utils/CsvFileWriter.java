@@ -1,4 +1,4 @@
-package com.goeuro.com.goeuro.utils;
+package com.goeuro.app.utils;
 
 
 import java.io.FileWriter;

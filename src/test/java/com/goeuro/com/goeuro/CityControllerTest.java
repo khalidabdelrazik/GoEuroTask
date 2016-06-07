@@ -3,7 +3,7 @@ package com.goeuro.com.goeuro;
 import org.junit.Assert;
 import org.junit.Test;
 
-import com.goeuro.com.goeuro.controller.CityService;
+import com.goeuro.app.service.CityService;
 
 // TODO: Auto-generated Javadoc
 /**

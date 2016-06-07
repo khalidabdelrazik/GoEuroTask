@@ -1,7 +1,7 @@
 /*
  * 
  */
-package com.goeuro.com.goeuro.utils;
+package com.goeuro.app.utils;
 
 import java.io.BufferedReader;
 import java.io.IOException;

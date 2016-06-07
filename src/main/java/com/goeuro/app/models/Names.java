@@ -1,4 +1,4 @@
-package com.goeuro.com.goeuro.models;
+package com.goeuro.app.models;
                  
 // TODO: Auto-generated Javadoc
 /**

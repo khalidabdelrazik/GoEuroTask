@@ -46,7 +46,7 @@
 					<appendAssemblyId>false</appendAssemblyId>
 					<archive>
 						<manifest>
-							<mainClass>com.goeuro.com.goeuro.Main</mainClass>
+							<mainClass>com.goeuro.app.Main</mainClass>
 						</manifest>
 					</archive>
 				</configuration>

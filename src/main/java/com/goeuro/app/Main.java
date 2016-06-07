@@ -1,11 +1,11 @@
 /*
  * 
  */
-package com.goeuro.com.goeuro;
+package com.goeuro.app;
 
 import java.io.IOException;
 
-import com.goeuro.com.goeuro.controller.CityService;
+import com.goeuro.app.service.CityService;
 import com.google.gson.JsonSyntaxException;
 
 // TODO: Auto-generated Javadoc

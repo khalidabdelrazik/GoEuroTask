@@ -1,11 +1,11 @@
-package com.goeuro.com.goeuro.controller;
+package com.goeuro.app.service;
 
 import java.io.IOException;
 
-import com.goeuro.com.goeuro.constants.Constants;
-import com.goeuro.com.goeuro.models.Country;
-import com.goeuro.com.goeuro.utils.CsvFileWriter;
-import com.goeuro.com.goeuro.utils.URLReaderUtil;
+import com.goeuro.app.constants.Constants;
+import com.goeuro.app.models.Country;
+import com.goeuro.app.utils.CsvFileWriter;
+import com.goeuro.app.utils.URLReaderUtil;
 import com.google.gson.Gson;
 
 // TODO: Auto-generated Javadoc
@@ -34,7 +34,7 @@ public class CityService {
 			apiUrl = Constants.REST_API_URL;
 		}
 		if (outputFileName == null) {
-			outputFileName = Constants.OUTPUT_FILE;
+			outputFileName = String.format(Constants.OUTPUT_FILE_FORMAT, cityName);
 		}
 		String cityData  = "";
 		try {
