@@ -17,8 +17,6 @@
 		<logback.version>1.0.13</logback.version>
 		<junit.version>4.11</junit.version>
 	</properties>
-
-
 	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>
@@ -57,6 +55,19 @@
 					</execution>
 				</executions>
 			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<configuration>
+					<archive>
+						<manifest>
+							<addClasspath>true</addClasspath>
+							<mainClass>com.goeuro.com.goeuro.Main</mainClass>
+						</manifest>
+					</archive>
+				</configuration>
+			</plugin>
+
 
 		</plugins>
 	</build>

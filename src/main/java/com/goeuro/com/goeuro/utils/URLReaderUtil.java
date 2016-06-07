@@ -1,3 +1,6 @@
+/*
+ * 
+ */
 package com.goeuro.com.goeuro.utils;
 
 import java.io.BufferedReader;
@@ -5,7 +8,19 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URL;
 
-public class ReadingUrlUtil {
+// TODO: Auto-generated Javadoc
+/**
+ * The Class URLReaderUtil.
+ */
+public class URLReaderUtil {
+	
+	/**
+	 * Read url.
+	 *
+	 * @param urlString the url string
+	 * @return the string
+	 * @throws IOException Signals that an I/O exception has occurred.
+	 */
 	public static String readUrl(String urlString) throws IOException {
 		BufferedReader reader = null;
 		try {
