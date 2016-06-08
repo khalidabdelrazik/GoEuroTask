@@ -14,4 +14,5 @@ public class Constants {
 	
 	/** The Constant CITY_NAME. */
 	public static final String DEFAULT_CITY_NAME = "Berlin";
+	public static final String LOGER_OUTPUT_FILE = "slf4j_config.xml";
 }

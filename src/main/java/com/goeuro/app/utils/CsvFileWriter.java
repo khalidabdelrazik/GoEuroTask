@@ -4,13 +4,19 @@ package com.goeuro.app.utils;
 import java.io.FileWriter;
 import java.io.IOException;
 
+import org.slf4j.Logger;
+
+import com.goeuro.app.logger.LoggerManager;
+import com.goeuro.app.service.CityService;
+
 /**
  * @author ashraf
  * Copied this class from https://examples.javacodegeeks.com/core-java/writeread-csv-files-in-java-example/
  * 
  */
 public class CsvFileWriter {
-	
+	private static final Logger LOGGER = LoggerManager.getInstant()
+			.getLogger(CsvFileWriter.class);;
 	private static final String NEW_LINE_SEPARATOR = "\n";
 	
 		//CSV file header
@@ -37,10 +43,10 @@ public class CsvFileWriter {
 
 			
 			
-			System.out.println("CSV file was created successfully !!!");
+			LOGGER.info("CSV file " + fileName + " was created successfully !!!");
 			
 		} catch (Exception e) {
-			System.out.println("Error in CsvFileWriter !!!");
+			LOGGER.error("Error in CsvFileWriter !!!");
 			e.printStackTrace();
 		} finally {
 			
@@ -48,7 +54,7 @@ public class CsvFileWriter {
 				fileWriter.flush();
 				fileWriter.close();
 			} catch (IOException e) {
-				System.out.println("Error while flushing/closing fileWriter !!!");
+				LOGGER.error("Error while flushing/closing fileWriter !!!");
                 e.printStackTrace();
 			}
 			

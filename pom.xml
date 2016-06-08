@@ -30,9 +30,27 @@
 			<version>2.3.1</version>
 			<scope>compile</scope>
 		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>${slf4j.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<version>${logback.version}</version>
+		</dependency>
 	</dependencies>
 	<build>
 		<finalName>GOERUO</finalName>
+		<resources>
+			<resource>
+				<directory></directory>
+				<includes>
+					<include>slf4j_config.xml</include>
+				</includes>
+			</resource>
+		</resources>
 		<plugins>
 
 			<plugin>

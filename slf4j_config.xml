@@ -1,0 +1,38 @@
+<configuration debug="false" scan="true" scanPeriod="900 seconds" >
+
+   <statusListener class="ch.qos.logback.core.status.NopStatusListener" />
+  <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+    <!-- encoders are assigned the type
+         ch.qos.logback.classic.encoder.PatternLayoutEncoder by default -->
+    <encoder>
+      <!--<pattern>%d{HH:mm:ss.SSS} [%-5level] %-36logger{36} - %msg%n</pattern>-->
+      <pattern>%d{yyyy-MMM-dd_HH:mm:ss.SSS} [%-5level] %-36logger{36} - %msg%n</pattern>
+    </encoder>
+  </appender>
+  
+  <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+    <!-- encoders are assigned the type
+         ch.qos.logback.classic.encoder.PatternLayoutEncoder by default -->
+    <file>log.log</file>
+    <encoder>
+      <pattern>%d{yyyy-MMM-dd_HH:mm:ss.SSS} [%-5level] %-36logger{36} - %msg%n</pattern>
+    </encoder>
+  </appender>
+
+  <!-- Our main package logging level will be info, we can change our code logging 
+  status with the below logger -->
+  <logger name="com.goeuro.app" level="INFO" >
+    <appender-ref ref="FILE" />
+	<appender-ref ref="STDOUT" />
+  </logger>
+  
+  <!-- System root logging level can be changed but take into consideration it will 
+  be override with the above logger for all class in com.orange.verbatims.analysis.* class -->
+  <!--root level="ERROR">
+    <appender-ref ref="STDOUT" />
+    <appender-ref ref="FILE" />
+  </root-->
+
+  
+ 
+</configuration>

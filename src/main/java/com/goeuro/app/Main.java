@@ -5,6 +5,9 @@ package com.goeuro.app;
 
 import java.io.IOException;
 
+import org.slf4j.Logger;
+
+import com.goeuro.app.logger.LoggerManager;
 import com.goeuro.app.service.CityService;
 import com.google.gson.JsonSyntaxException;
 
@@ -13,7 +16,8 @@ import com.google.gson.JsonSyntaxException;
  * The Class Main.
  */
 public class Main {
-	
+	private static final Logger LOGGER = LoggerManager.getInstant().getLogger(
+			Main.class);;
 	/**
 	 * The main method.
 	 *
@@ -43,7 +47,14 @@ public class Main {
 				}
 
 			}
-			cityController.exprtCityData(cityName, apiUrl, outputFileName);
+			if(cityController.exprtCityData(cityName, apiUrl, outputFileName)) {
+				LOGGER.info("Exporting " + cityName + " Data from " + apiUrl
+						+ " output file " + outputFileName + " done successfully");
+
+			} else {
+				LOGGER.info("Exporting " + cityName + " Data from " + apiUrl
+						+ " output file " + outputFileName + " failed");
+			}
 		} else {
 			System.out
 					.println("--help for help\n"
