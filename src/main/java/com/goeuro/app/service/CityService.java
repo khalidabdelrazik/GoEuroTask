@@ -59,7 +59,8 @@ public class CityService {
 		if (cityData != null) {
 			Country[] countries = gson.fromJson(cityData, Country[].class);
 			if (countries != null) {
-				CsvFileWriter.writeCsvFile(outputFileName, countries);
+				if (!CsvFileWriter.writeCsvFile(outputFileName, countries))
+					return false;
 			} else {
 				return false;
 			}

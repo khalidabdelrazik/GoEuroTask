@@ -1,6 +1,7 @@
 package com.goeuro.app.utils;
 
 
+import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 
@@ -22,7 +23,7 @@ public class CsvFileWriter {
 		//CSV file header
 	private static final String FILE_HEADER = "_id,name,type,latitude,longitude";
 
-	public static void writeCsvFile(String fileName, Object[] objects) {
+	public static boolean writeCsvFile(String fileName, Object[] objects) {
 		
 		FileWriter fileWriter = null;
 				
@@ -45,9 +46,12 @@ public class CsvFileWriter {
 			
 			LOGGER.info("CSV file " + fileName + " was created successfully !!!");
 			
-		} catch (Exception e) {
+		} catch (FileNotFoundException e) {
 			LOGGER.error("Error in CsvFileWriter !!!");
-			e.printStackTrace();
+			return false;
+		} catch (IOException e) {
+			LOGGER.error("Error in CsvFileWriter !!!");
+			return false;
 		} finally {
 			
 			try {
@@ -55,9 +59,10 @@ public class CsvFileWriter {
 				fileWriter.close();
 			} catch (IOException e) {
 				LOGGER.error("Error while flushing/closing fileWriter !!!");
-                e.printStackTrace();
+				return false;
 			}
 			
 		}
+		return true;
 	}
 }
