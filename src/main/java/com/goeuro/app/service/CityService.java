@@ -28,13 +28,13 @@ public class CityService {
 	public boolean exprtCityData(String cityName, String apiUrl,
 			String outputFileName) {
 		if (cityName == null) {
-			cityName = Constants.CITY_NAME;
+			cityName = Constants.DEFAULT_CITY_NAME;
 		}
 		if (apiUrl == null) {
-			apiUrl = Constants.REST_API_URL;
+			apiUrl = Constants.DEFAULT_REST_API_URL;
 		}
 		if (outputFileName == null) {
-			outputFileName = String.format(Constants.OUTPUT_FILE_FORMAT, cityName);
+			outputFileName = String.format(Constants.DEFAULT_OUTPUT_FILE_FORMAT, cityName);
 		}
 		String cityData  = "";
 		try {
