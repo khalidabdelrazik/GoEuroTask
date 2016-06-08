@@ -1,4 +1,4 @@
-package com.goeuro.com.goeuro;
+package com.goeuro;
 
 import org.junit.Assert;
 import org.junit.Test;
